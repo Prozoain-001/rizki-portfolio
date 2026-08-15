@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Rizki Setiawan</title>
+<meta name="description" content="Selected interior and architectural work by Rizki Setiawan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/main.css">
+<style>
+  .work-hero { padding: var(--sp-9) var(--edge) var(--sp-5); border-bottom: 1px solid var(--dm-line); }
+  .filter-bar { display: flex; gap: var(--sp-3); padding: var(--sp-3) var(--edge); flex-wrap: wrap; }
+  .filter-bar button { font-size: var(--fs-meta); letter-spacing: var(--ls-meta); text-transform: uppercase; color: var(--dm-grey); padding-bottom: 2px; border-bottom: 1px solid transparent; }
+  .filter-bar button.is-active, .filter-bar button:hover { color: var(--dm-warm-white); border-bottom-color: currentColor; }
+  .project-row.is-hidden { display: none; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-transition" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="index.html">RS</a>
+  <nav class="nav-list" aria-label="Primary">
+    <a href="index.html">Index</a>
+    <a href="work.html" aria-current="page">Work</a>
+    <a href="experiments.html">Experiments</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+  <a href="index.html">Index</a>
+  <a href="work.html">Work</a>
+  <a href="experiments.html">Experiments</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main">
+  <section class="work-hero">
+    <span class="eyebrow reveal">Vol. 02 — Work</span>
+    <p class="statement__text reveal" style="margin-top:var(--sp-3); max-width:24ch;">Interior and architectural projects, ordered by intention.</p>
+  </section>
+
+  <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter projects by category"></div>
+
+  <section class="work-section" style="padding-top:0;">
+    <div class="project-list" id="project-list"><!-- rendered by JS --></div>
+    <div class="project-preview" aria-hidden="true"><img src="" alt=""></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>Rizki Setiawan © 2026</span>
+  <span>Jakarta / Indonesia</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const listEl = document.getElementById('project-list');
+  renderProjectList(listEl);
+
+  // Build category filter from tags
+  const cats = Array.from(new Set(PROJECTS.map(p => p.category)));
+  const bar = document.getElementById('filter-bar');
+  bar.innerHTML = ['All', ...cats].map((c, i) =>
+    `<button data-cat="${c}" class="${i === 0 ? 'is-active' : ''}">${c}</button>`
+  ).join('');
+
+  bar.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    bar.querySelectorAll('button').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    const cat = btn.getAttribute('data-cat');
+    listEl.querySelectorAll('.project-row').forEach((row, i) => {
+      const p = PROJECTS[i];
+      row.classList.toggle('is-hidden', cat !== 'All' && p.category !== cat);
+    });
+  });
+</script>
+</body>
+</html>

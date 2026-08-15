@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rizki Setiawan — Spatial Designer</title>
+<meta name="description" content="Rizki Setiawan — Interior designer with an architectural perspective. Spatial design, structure and atmosphere.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-transition" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="index.html">RS</a>
+  <nav class="nav-list" aria-label="Primary">
+    <a href="index.html" aria-current="page">Index</a>
+    <a href="work.html">Work</a>
+    <a href="experiments.html">Experiments</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+  <a href="index.html">Index</a>
+  <a href="work.html">Work</a>
+  <a href="experiments.html">Experiments</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main">
+
+  <!-- 01 — INTRO -->
+  <section class="intro">
+    <div class="intro__meta">
+      <span class="eyebrow">Based in Indonesia</span>
+      <span class="eyebrow">Vol. 01 — Index</span>
+    </div>
+    <h1 class="intro__name"><span>Rizki Setiawan</span></h1>
+    <div class="intro__role">
+      <span class="eyebrow serif" style="font-family:var(--font-display); font-style:italic; text-transform:none; letter-spacing:0;">Spatial Designer</span>
+      <span class="eyebrow">Interior / Architecture / Visual</span>
+    </div>
+    <span class="intro__scroll">Scroll</span>
+  </section>
+
+  <!-- 02 — STATEMENT -->
+  <section class="statement">
+    <p class="statement__text reveal">I design spaces <span class="muted">between</span> form &amp; feeling.</p>
+  </section>
+
+  <!-- 03 — SELECTED WORK -->
+  <section class="work-section">
+    <div class="work-section__head">
+      <h2 class="section-heading reveal">Selected Work</h2>
+      <a class="link-arrow" href="work.html" data-cursor="View">All Work →</a>
+    </div>
+    <div class="project-list" id="project-list"><!-- rendered by JS --></div>
+    <div class="project-preview" aria-hidden="true"><img src="" alt=""></div>
+  </section>
+
+  <!-- 16 — FEATURED PROJECT -->
+  <section class="featured container" id="featured-project"><!-- rendered by JS --></section>
+
+  <!-- 17 — STRUCTURE (Dark Matter) -->
+  <section class="structure">
+    <div class="structure__head">
+      <span class="eyebrow reveal">Dark Matter</span>
+      <p class="statement__text reveal">Before space, there is structure.</p>
+    </div>
+    <div class="structure__grid">
+      <figure class="structure__item reveal" data-cursor="Plan">
+        <img src="images/diagrams/placeholder-plan.svg" alt="Floor plan diagram placeholder" loading="lazy">
+        <figcaption>Floor Plan — [Project]</figcaption>
+      </figure>
+      <figure class="structure__item reveal" data-cursor="Plan">
+        <img src="images/diagrams/placeholder-section.svg" alt="Building section diagram placeholder" loading="lazy">
+        <figcaption>Section — [Project]</figcaption>
+      </figure>
+      <figure class="structure__item reveal" data-cursor="Plan">
+        <img src="images/diagrams/placeholder-facade.svg" alt="Facade elevation diagram placeholder" loading="lazy">
+        <figcaption>Facade — [Project]</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="soft-transition" aria-hidden="true"></div>
+
+  <!-- 18 — SOFT SPACE -->
+  <section class="soft-space">
+    <div class="soft-space__head">
+      <span class="eyebrow reveal"><span class="accent-swatch" style="background:var(--ss-pink)"></span>Soft Space</span>
+      <p class="soft-space__statement reveal">Then comes light, material, and atmosphere.</p>
+    </div>
+    <div class="soft-space__gallery">
+      <figure class="reveal" data-cursor="Explore">
+        <img src="images/interiors/placeholder-01.svg" alt="Interior atmosphere placeholder" loading="lazy">
+        <figcaption>Living Space — [Project]</figcaption>
+      </figure>
+      <figure class="tall reveal" data-cursor="Explore">
+        <img src="images/interiors/placeholder-02.svg" alt="Material detail placeholder" loading="lazy">
+        <figcaption>Material Detail — [Project]</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 19 — EXPERIMENTS PREVIEW -->
+  <section class="preview-band">
+    <div class="preview-band__text reveal">
+      <span class="eyebrow">Experiments</span>
+      <h2 class="section-heading" style="font-size:var(--fs-h2); margin-top:var(--sp-2);">Visual studies &amp; material explorations</h2>
+      <p>A collection of visual studies, spatial ideas, and things made simply because they're interesting.</p>
+      <a class="link-arrow" href="experiments.html" data-cursor="View">View Experiments →</a>
+    </div>
+    <div class="preview-band__visual reveal" data-cursor="Explore">
+      <img src="images/experiments/placeholder-01.svg" alt="Experimental visual study placeholder" loading="lazy">
+    </div>
+  </section>
+
+  <!-- 20 — ABOUT PREVIEW -->
+  <section class="preview-band" style="border-top:1px solid var(--ss-line);">
+    <div class="preview-band__visual reveal" data-cursor="Explore">
+      <img src="images/about/placeholder.svg" alt="Portrait placeholder" loading="lazy">
+    </div>
+    <div class="preview-band__text reveal">
+      <span class="eyebrow">About</span>
+      <h2 class="section-heading" style="font-size:var(--fs-h2); margin-top:var(--sp-2);">Interior designer with an architectural perspective</h2>
+      <p>Drawn to structure as much as atmosphere — spatial design that considers plan, material, and feeling together.</p>
+      <a class="link-arrow" href="about.html" data-cursor="View">More About →</a>
+    </div>
+  </section>
+
+  <!-- 21 — CONTACT -->
+  <section class="contact">
+    <p class="contact__statement reveal">Let's<br>create<br>a space.</p>
+    <div class="contact__links">
+      <span class="placeholder">Email — [pending]</span>
+      <span class="placeholder">Instagram — [pending]</span>
+      <span class="placeholder">LinkedIn — [pending]</span>
+      <span class="placeholder">Behance — [pending]</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>Rizki Setiawan © 2026</span>
+  <span>Jakarta / Indonesia</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  renderProjectList(document.getElementById('project-list'));
+  renderFeatured(document.getElementById('featured-project'));
+</script>
+</body>
+</html>

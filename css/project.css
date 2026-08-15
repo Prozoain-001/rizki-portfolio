@@ -1,0 +1,74 @@
+/* ==========================================================================
+   PROJECT DETAIL PAGE
+   ========================================================================== */
+
+.project-hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--sp-8) var(--edge) var(--sp-6);
+}
+.project-hero__bg {
+  position: absolute; inset: -12% 0;
+  z-index: -1;
+  will-change: transform;
+}
+.project-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+.project-hero__bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(13,14,16,0.15) 0%, rgba(13,14,16,0.85) 100%);
+}
+.project-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 6rem);
+  line-height: 0.98;
+  max-width: 16ch;
+}
+.project-hero__meta {
+  display: flex;
+  gap: var(--sp-5);
+  margin-top: var(--sp-4);
+  flex-wrap: wrap;
+}
+.project-hero__meta dt { font-size: var(--fs-micro); letter-spacing: var(--ls-micro); text-transform: uppercase; color: var(--dm-grey); }
+.project-hero__meta dd { margin: 2px 0 0; font-size: var(--fs-body); }
+
+.project-block {
+  padding: var(--sp-7) var(--edge);
+  border-top: 1px solid var(--dm-line);
+}
+.project-block__num { font-size: var(--fs-meta); letter-spacing: var(--ls-meta); color: var(--dm-grey); }
+.project-block__title { font-family: var(--font-display); font-size: var(--fs-h2); margin-top: var(--sp-2); max-width: 20ch; }
+.project-block__text { margin-top: var(--sp-3); max-width: 60ch; color: var(--dm-warm-white); opacity: 0.85; }
+
+.project-media-grid {
+  margin-top: var(--sp-5);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+.project-media-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; background: var(--dm-bg-2); }
+.project-media-grid.single { grid-template-columns: 1fr; }
+.project-media-grid.single img { aspect-ratio: 16/9; }
+
+.project-final-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+.project-final-gallery img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--sp-6) var(--edge);
+  border-top: 1px solid var(--dm-line);
+}
+.project-nav a { font-family: var(--font-display); font-size: var(--fs-h3); }
+.project-nav .eyebrow { display: block; margin-bottom: var(--sp-1); }
+
+@media (max-width: 900px) {
+  .project-media-grid, .project-final-gallery { grid-template-columns: 1fr; }
+}

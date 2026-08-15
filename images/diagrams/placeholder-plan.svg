@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#111A26"/>
+  <g stroke="#E7E3DA" stroke-width="1.2" fill="none" opacity="0.85">
+    <rect x="120" y="120" width="560" height="360"/>
+    <line x1="120" y1="300" x2="680" y2="300"/>
+    <line x1="400" y1="120" x2="400" y2="480"/>
+    <line x1="120" y1="120" x2="680" y2="480"/>
+  </g>
+  <text x="120" y="560" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="2" fill="#777A7D">FLOOR PLAN — PLACEHOLDER</text>
+</svg>

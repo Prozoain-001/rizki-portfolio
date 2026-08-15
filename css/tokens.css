@@ -1,0 +1,79 @@
+/* ==========================================================================
+   RIZKI SETIAWAN — DESIGN TOKENS
+   Dark Matter / Soft Space system
+   ========================================================================== */
+
+:root {
+  /* ---- Dark Matter (structure, architecture) ---- */
+  --dm-bg: #0D0E10;
+  --dm-bg-2: #15171A;
+  --dm-navy: #111A26;
+  --dm-grey: #777A7D;
+  --dm-warm-white: #E7E3DA;
+  --dm-line: rgba(231, 227, 218, 0.14);
+  --dm-line-strong: rgba(231, 227, 218, 0.28);
+
+  /* ---- Soft Space (interior, atmosphere) ---- */
+  --ss-bg: #E8E3DB;
+  --ss-bg-2: #DFD9CE;
+  --ss-lavender: #B8A9C1;
+  --ss-pink: #C9AEB5;
+  --ss-blue: #AAB8C6;
+  --ss-sage: #AEB8A8;
+  --ss-ink: #17181A;
+  --ss-line: rgba(23, 24, 26, 0.12);
+
+  /* ---- Typography ---- */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+
+  --fs-hero: clamp(3rem, 9vw, 8.5rem);
+  --fs-h1: clamp(2.25rem, 5.5vw, 4.75rem);
+  --fs-h2: clamp(1.6rem, 3.4vw, 2.75rem);
+  --fs-h3: clamp(1.2rem, 2vw, 1.6rem);
+  --fs-body: clamp(0.95rem, 1.1vw, 1.05rem);
+  --fs-meta: 0.78rem;
+  --fs-micro: 0.68rem;
+
+  --lh-tight: 1.02;
+  --lh-snug: 1.2;
+  --lh-body: 1.6;
+
+  --ls-meta: 0.14em;
+  --ls-micro: 0.18em;
+
+  /* ---- Spacing (8px base scale) ---- */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-5: 3rem;
+  --sp-6: 4.5rem;
+  --sp-7: 7rem;
+  --sp-8: 10rem;
+  --sp-9: 14rem;
+
+  /* ---- Layout ---- */
+  --container-max: 1600px;
+  --edge: clamp(1.25rem, 4vw, 4rem);
+  --grid-gap: clamp(1rem, 2vw, 2rem);
+
+  /* ---- Motion ---- */
+  --ease-editorial: cubic-bezier(0.65, 0, 0.15, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.3s;
+  --dur-mid: 0.6s;
+  --dur-slow: 1.1s;
+  --dur-glacial: 1.8s;
+
+  /* ---- Structure ---- */
+  --radius: 2px;
+  --z-nav: 100;
+  --z-cursor: 200;
+  --z-transition: 300;
+
+  /* ---- Breakpoints reference (used in media queries directly) ----
+     tablet: 900px
+     mobile: 600px
+  */
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#DFD9CE"/>
+  <line x1="0" y1="0" x2="800" y2="600" stroke="#C7C1B4" stroke-width="1"/>
+  <line x1="800" y1="0" x2="0" y2="600" stroke="#C7C1B4" stroke-width="1"/>
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#C7C1B4" stroke-width="1"/>
+  <circle cx="400" cy="280" r="3" fill="#AAB8C6"/>
+  <text x="40" y="540" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#7C776C">MATERIAL DETAIL — PLACEHOLDER</text>
+  <text x="40" y="565" font-family="Georgia, serif" font-size="26" fill="#17181A">Commercial Space</text>
+</svg>
