@@ -8,7 +8,7 @@ const PROJECTS = [
   {
     id: 1,
     slug: "master-bedroom",
-    title: "Master Bedroom",
+    title: "Master Bedroom Mr. S",
     category: "Interior Design — Residential",
     year: "2025",
     location: "West Jakarta",
@@ -17,9 +17,9 @@ const PROJECTS = [
     tags: ["Interior", "Residential"],
     thumbnail: "images/projects/master-bedroom-01.jpg",
     heroImage: "images/projects/master-bedroom-01.jpg",
-    brief: "[Design brief — one or two sentences on the client need and site context.]",
-    concept: "[The core design concept and the thinking behind it.]",
-    mood: "[Words that describe the intended atmosphere.]",
+    brief: "Warm and comfort.",
+    concept: "Modern Minimalist",
+    mood: "The use of wood materials, marble patterns, and solid colors creates a comfortable atmosphere that reflects the client's taste, complemented by minimalist handles and gold-framedless glass doors that align with their preferences.",
     plans: [
       "images/projects/master-bedroom-plan-01.jpg",
       "images/projects/master-bedroom-plan-application.jpg"
@@ -28,13 +28,7 @@ const PROJECTS = [
     facade: [],
     renders: ["images/projects/master-bedroom-01.jpg", "images/projects/master-bedroom-02.jpg"],
     details: [
-      "images/projects/master-bedroom-detail-pvc-marble.jpg",
-      "images/projects/master-bedroom-detail-hpl-taco022.jpg",
-      "images/projects/master-bedroom-detail-hpl-taco134.jpg",
-      "images/projects/master-bedroom-detail-vinyl-flooring.jpg",
-      "images/projects/master-bedroom-detail-clear-glass.jpg",
-      "images/projects/master-bedroom-detail-metal-bronze.jpg",
-      "images/projects/master-bedroom-detail-led-lighting.jpg"
+      "images/projects/master-bedroom-material-board.jpg"
     ],
     gallery: ["images/projects/master-bedroom-01.jpg", "images/projects/master-bedroom-02.jpg"]
   },
