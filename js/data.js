@@ -10,9 +10,9 @@ const PROJECTS = [
     slug: "master-bedroom",
     title: "Master Bedroom",
     category: "Interior Design — Residential",
-    year: "[YEAR]",
+    year: "2025",
     location: "West Jakarta",
-    area: "25.8 m²",
+    area: "25.8 m² (4.15 × 5.78 m)",
     role: "Designer",
     tags: ["Interior", "Residential"],
     thumbnail: "images/projects/master-bedroom-01.jpg",
@@ -20,11 +20,22 @@ const PROJECTS = [
     brief: "[Design brief — one or two sentences on the client need and site context.]",
     concept: "[The core design concept and the thinking behind it.]",
     mood: "[Words that describe the intended atmosphere.]",
-    plans: [],
+    plans: [
+      "images/projects/master-bedroom-plan-01.jpg",
+      "images/projects/master-bedroom-plan-application.jpg"
+    ],
     sections: [],
     facade: [],
     renders: ["images/projects/master-bedroom-01.jpg", "images/projects/master-bedroom-02.jpg"],
-    details: [],
+    details: [
+      "images/projects/master-bedroom-detail-pvc-marble.jpg",
+      "images/projects/master-bedroom-detail-hpl-taco022.jpg",
+      "images/projects/master-bedroom-detail-hpl-taco134.jpg",
+      "images/projects/master-bedroom-detail-vinyl-flooring.jpg",
+      "images/projects/master-bedroom-detail-clear-glass.jpg",
+      "images/projects/master-bedroom-detail-metal-bronze.jpg",
+      "images/projects/master-bedroom-detail-led-lighting.jpg"
+    ],
     gallery: ["images/projects/master-bedroom-01.jpg", "images/projects/master-bedroom-02.jpg"]
   },
   {
