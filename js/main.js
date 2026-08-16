@@ -72,27 +72,47 @@ function initReveals(root) {
 }
 initReveals();
 
-/* ---------------- Project row hover preview (smooth follow) ---------------- */
+/* ---------------- Project row hover preview (smooth follow + tilt) ---------------- */
 function initProjectHoverPreview() {
   const rows = document.querySelectorAll('.project-row');
   const preview = document.querySelector('.project-preview');
   if (!rows.length || !preview) return;
   const img = preview.querySelector('img');
   const hasGsap = typeof gsap !== 'undefined';
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const setX = hasGsap ? gsap.quickTo(preview, 'left', { duration: 0.55, ease: 'power3.out' }) : (v) => preview.style.left = v + 'px';
   const setY = hasGsap ? gsap.quickTo(preview, 'top', { duration: 0.55, ease: 'power3.out' }) : (v) => preview.style.top = v + 'px';
 
+  let lastX = null;
+  let tiltTimeout;
+
   rows.forEach(row => {
-    row.addEventListener('mousemove', (e) => { setX(e.clientX); setY(e.clientY); });
+    row.addEventListener('mousemove', (e) => {
+      setX(e.clientX); setY(e.clientY);
+
+      if (!reduced) {
+        if (lastX !== null) {
+          const delta = e.clientX - lastX;
+          const tilt = Math.max(-10, Math.min(10, delta * 0.9));
+          preview.style.setProperty('--tilt', tilt + 'deg');
+          clearTimeout(tiltTimeout);
+          tiltTimeout = setTimeout(() => preview.style.setProperty('--tilt', '0deg'), 200);
+        }
+        lastX = e.clientX;
+      }
+    });
     row.addEventListener('mouseenter', (e) => {
       img.src = row.getAttribute('data-image') || '';
       preview.style.left = e.clientX + 'px';
       preview.style.top = e.clientY + 'px';
       preview.classList.add('is-visible');
+      lastX = e.clientX;
     });
     row.addEventListener('mouseleave', () => {
       preview.classList.remove('is-visible');
+      preview.style.setProperty('--tilt', '0deg');
+      lastX = null;
     });
   });
 }
@@ -156,7 +176,7 @@ function renderFeatured(target) {
   const p = getProject(FEATURED_SLUG) || PROJECTS[0];
   target.innerHTML = `
     <a class="featured__frame reveal" href="project.html?slug=${p.slug}" data-cursor="Explore">
-      <img src="${p.heroImage}" alt="${p.title} — featured project" loading="lazy">
+      <img class="kenburns" src="${p.heroImage}" alt="${p.title} — featured project" loading="lazy">
     </a>
     <div class="featured__body">
       <h3 class="featured__title reveal">${p.title}</h3>
@@ -181,7 +201,7 @@ function renderExperiments(target, limit) {
   const items = limit ? EXPERIMENTS.slice(0, limit) : EXPERIMENTS;
   target.innerHTML = items.map((x, i) => `
     <figure class="experiment-item reveal" style="transition-delay:${(i % 3) * 0.08}s" data-cursor="Explore">
-      <img src="${x.image}" alt="${x.title}" loading="lazy">
+      <div class="media-frame"><img src="${x.image}" alt="${x.title}" loading="lazy"></div>
       <figcaption><span>${x.title}</span><span>${x.type}</span></figcaption>
     </figure>
   `).join('');

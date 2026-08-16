@@ -7,25 +7,25 @@
 const PROJECTS = [
   {
     id: 1,
-    slug: "private-residence",
-    title: "Private Residence",
+    slug: "master-bedroom",
+    title: "Master Bedroom",
     category: "Interior Design — Residential",
     year: "[YEAR]",
-    location: "[LOCATION]",
-    area: "[AREA]",
-    role: "[ROLE]",
+    location: "West Jakarta",
+    area: "25.8 m²",
+    role: "Designer",
     tags: ["Interior", "Residential"],
-    thumbnail: "images/projects/placeholder-01.svg",
-    heroImage: "images/projects/placeholder-01.svg",
+    thumbnail: "images/projects/master-bedroom-01.jpg",
+    heroImage: "images/projects/master-bedroom-01.jpg",
     brief: "[Design brief — one or two sentences on the client need and site context.]",
     concept: "[The core design concept and the thinking behind it.]",
     mood: "[Words that describe the intended atmosphere.]",
-    plans: ["images/projects/placeholder-plan-01.svg"],
-    sections: ["images/projects/placeholder-section-01.svg"],
+    plans: [],
+    sections: [],
     facade: [],
-    renders: ["images/projects/placeholder-01.svg", "images/projects/placeholder-02.svg"],
-    details: ["images/projects/placeholder-detail-01.svg"],
-    gallery: ["images/projects/placeholder-01.svg", "images/projects/placeholder-02.svg", "images/projects/placeholder-03.svg"]
+    renders: ["images/projects/master-bedroom-01.jpg", "images/projects/master-bedroom-02.jpg"],
+    details: [],
+    gallery: ["images/projects/master-bedroom-01.jpg", "images/projects/master-bedroom-02.jpg"]
   },
   {
     id: 2,
@@ -149,7 +149,7 @@ const EXPERIMENTS = [
 ];
 
 // Featured project shown on homepage — references a project by slug
-const FEATURED_SLUG = "private-residence";
+const FEATURED_SLUG = "master-bedroom";
 
 function getProject(slug) {
   return PROJECTS.find(p => p.slug === slug);
