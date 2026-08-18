@@ -188,6 +188,42 @@ const PROJECTS = [
       "images/projects/study-room-02.jpg",
       "images/projects/study-room-03.jpg"
     ]
+  },
+  {
+    id: 8,
+    slug: "meeting-room",
+    title: "Meeting & Working Room",
+    category: "Interior Design — Commercial",
+    year: "2026",
+    location: "West Jakarta",
+    area: "63.74 m² (6.46 × 9.79 m)",
+    role: "Designer",
+    tags: ["Interior", "Commercial"],
+    thumbnail: "images/projects/meeting-room-01.jpg",
+    heroImage: "images/projects/meeting-room-01.jpg",
+    brief: "A multifunctional and modern meeting space.",
+    concept: "Modern Design",
+    mood: "The meeting room design—which also serves as a space for casual gatherings—features a wood-toned HPL finish and camouflage-style blinds that conceal a glassboard, making the space multifunctional.",
+    plans: ["images/projects/meeting-room-plan-01.jpg"],
+    sections: [],
+    facade: [],
+    renders: [
+      "images/projects/meeting-room-01.jpg",
+      "images/projects/meeting-room-02.jpg",
+      "images/projects/meeting-room-03.jpg",
+      "images/projects/meeting-room-04.jpg",
+      "images/projects/meeting-room-05.jpg",
+      "images/projects/meeting-room-06.jpg"
+    ],
+    details: ["images/projects/meeting-room-material-board.jpg"],
+    gallery: [
+      "images/projects/meeting-room-01.jpg",
+      "images/projects/meeting-room-02.jpg",
+      "images/projects/meeting-room-03.jpg",
+      "images/projects/meeting-room-04.jpg",
+      "images/projects/meeting-room-05.jpg",
+      "images/projects/meeting-room-06.jpg"
+    ]
   }
 ];
 
