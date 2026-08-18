@@ -157,9 +157,10 @@ initProjectHoverPreview();
    RENDER HELPERS — used by index/work/project/experiments pages
    ========================================================================== */
 
-function renderProjectList(target) {
+function renderProjectList(target, limit) {
   if (!target || typeof PROJECTS === 'undefined') return;
-  target.innerHTML = PROJECTS.map((p, i) => `
+  const items = limit ? PROJECTS.slice(0, limit) : PROJECTS;
+  target.innerHTML = items.map((p, i) => `
     <a class="project-row reveal" style="transition-delay:${i * 0.06}s" href="project.html?slug=${p.slug}" data-image="${p.thumbnail}" data-cursor="View">
       <span class="project-row__index">${String(i + 1).padStart(2, '0')}</span>
       <span class="project-row__title">${p.title}</span>

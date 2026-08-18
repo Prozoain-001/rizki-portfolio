@@ -57,6 +57,14 @@
     <p class="statement__text reveal">I design spaces <span class="muted">between</span> form &amp; feeling.</p>
   </section>
 
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Interior Design</span><span>Spatial Thinking</span><span>Architecture</span><span>Visual Art</span><span>Material &amp; Light</span>
+      <span>Interior Design</span><span>Spatial Thinking</span><span>Architecture</span><span>Visual Art</span><span>Material &amp; Light</span>
+    </div>
+  </div>
+
   <!-- 03 — SELECTED WORK -->
   <section class="work-section">
     <div class="work-section__head">
@@ -102,11 +110,11 @@
     </div>
     <div class="soft-space__gallery">
       <figure class="reveal" data-cursor="Explore">
-        <img src="images/interiors/placeholder-01.svg" alt="Interior atmosphere placeholder" loading="lazy">
+        <div class="media-frame"><img src="images/interiors/placeholder-01.svg" alt="Interior atmosphere placeholder" loading="lazy"></div>
         <figcaption>Living Space — [Project]</figcaption>
       </figure>
       <figure class="tall reveal" data-cursor="Explore">
-        <img src="images/interiors/placeholder-02.svg" alt="Material detail placeholder" loading="lazy">
+        <div class="media-frame"><img src="images/interiors/placeholder-02.svg" alt="Material detail placeholder" loading="lazy"></div>
         <figcaption>Material Detail — [Project]</figcaption>
       </figure>
     </div>
@@ -160,7 +168,7 @@
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
 <script>
-  renderProjectList(document.getElementById('project-list'));
+  renderProjectList(document.getElementById('project-list'), 4);
   renderFeatured(document.getElementById('featured-project'));
 </script>
 </body>
