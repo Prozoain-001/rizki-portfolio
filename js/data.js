@@ -158,6 +158,36 @@ const PROJECTS = [
     renders: ["images/projects/placeholder-06.svg"],
     details: [],
     gallery: ["images/projects/placeholder-06.svg"]
+  },
+  {
+    id: 7,
+    slug: "study-room",
+    title: "Study Room",
+    category: "Interior Design — Residential",
+    year: "2026",
+    location: "North Jakarta",
+    area: "9.79 m² (2.72 × 3.6 m)",
+    role: "Designer",
+    tags: ["Interior", "Residential"],
+    thumbnail: "images/projects/study-room-01.jpg",
+    heroImage: "images/projects/study-room-01.jpg",
+    brief: "A multifunctional and modern study space.",
+    concept: "Modern Design",
+    mood: "A modern design with a contemporary Scandinavian touch, prioritizing space efficiency, a comfortable study environment for three children, and a clean, elegant aesthetic. The blend of neutral tones, natural wood materials, and warm lighting creates a study atmosphere that is both productive and comfortable for extended use.",
+    plans: ["images/projects/study-room-plan-01.jpg"],
+    sections: [],
+    facade: [],
+    renders: [
+      "images/projects/study-room-01.jpg",
+      "images/projects/study-room-02.jpg",
+      "images/projects/study-room-03.jpg"
+    ],
+    details: ["images/projects/study-room-material-board.jpg"],
+    gallery: [
+      "images/projects/study-room-01.jpg",
+      "images/projects/study-room-02.jpg",
+      "images/projects/study-room-03.jpg"
+    ]
   }
 ];
 
