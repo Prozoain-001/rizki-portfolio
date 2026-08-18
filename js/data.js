@@ -100,7 +100,8 @@ const PROJECTS = [
     facade: [],
     renders: ["images/projects/gading-pandawa-guest-01.jpg"],
     details: [
-      "images/projects/gading-pandawa-guest-material-board.jpg"
+      "images/projects/gading-pandawa-guest-material-board.jpg",
+      "images/projects/gading-pandawa-guest-closeup.jpg"
     ],
     gallery: ["images/projects/gading-pandawa-guest-01.jpg"]
   },
