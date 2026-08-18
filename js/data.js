@@ -224,6 +224,40 @@ const PROJECTS = [
       "images/projects/meeting-room-05.jpg",
       "images/projects/meeting-room-06.jpg"
     ]
+  },
+  {
+    id: 9,
+    slug: "meeting-room-graha-bawah",
+    title: "Meeting Room",
+    category: "Interior Design — Commercial",
+    year: "2026",
+    location: "West Jakarta",
+    area: "48.51 m² (4.9 × 9.9 m)",
+    role: "Designer",
+    tags: ["Interior", "Commercial"],
+    thumbnail: "images/projects/meeting-room-gb-01.jpg",
+    heroImage: "images/projects/meeting-room-gb-01.jpg",
+    brief: "Professional meeting room.",
+    concept: "Modern Design",
+    mood: "A meeting room for 12 people featuring a modern yet professional atmosphere; the addition of a concealed door within the WPC wall paneling creates a cleaner, more streamlined look.",
+    plans: [],
+    sections: [],
+    facade: [],
+    renders: [
+      "images/projects/meeting-room-gb-01.jpg",
+      "images/projects/meeting-room-gb-02.jpg",
+      "images/projects/meeting-room-gb-03.jpg",
+      "images/projects/meeting-room-gb-04.jpg",
+      "images/projects/meeting-room-gb-05.jpg"
+    ],
+    details: ["images/projects/meeting-room-gb-material-board.jpg"],
+    gallery: [
+      "images/projects/meeting-room-gb-01.jpg",
+      "images/projects/meeting-room-gb-02.jpg",
+      "images/projects/meeting-room-gb-03.jpg",
+      "images/projects/meeting-room-gb-04.jpg",
+      "images/projects/meeting-room-gb-05.jpg"
+    ]
   }
 ];
 
