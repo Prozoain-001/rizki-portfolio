@@ -258,6 +258,36 @@ const PROJECTS = [
       "images/projects/meeting-room-gb-04.jpg",
       "images/projects/meeting-room-gb-05.jpg"
     ]
+  },
+  {
+    id: 10,
+    slug: "booth-shareen",
+    title: "Booth Event (Shareen)",
+    category: "Interior Design — Commercial",
+    year: "2026",
+    location: "Surabaya",
+    area: "54 m² (6 × 9 m)",
+    role: "Designer",
+    tags: ["Interior", "Commercial"],
+    thumbnail: "images/projects/booth-shareen-01.jpg",
+    heroImage: "images/projects/booth-shareen-01.jpg",
+    brief: "Eye-catching and premium-looking.",
+    concept: "Modern & Luxury",
+    mood: "The event booth design aims to showcase the brand's fabric products, employing a dynamic and flexible approach characterized by wave-like forms and ornaments, alongside a color palette that is both beautiful and luxurious.",
+    plans: ["images/projects/booth-shareen-plan-01.jpg"],
+    sections: [],
+    facade: [],
+    renders: [
+      "images/projects/booth-shareen-01.jpg",
+      "images/projects/booth-shareen-02.jpg",
+      "images/projects/booth-shareen-03.jpg"
+    ],
+    details: ["images/projects/booth-shareen-material-board.jpg"],
+    gallery: [
+      "images/projects/booth-shareen-01.jpg",
+      "images/projects/booth-shareen-02.jpg",
+      "images/projects/booth-shareen-03.jpg"
+    ]
   }
 ];
 
