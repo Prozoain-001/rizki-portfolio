@@ -92,6 +92,14 @@ a:focus-visible, button:focus-visible {
   padding: var(--sp-3) var(--edge);
   mix-blend-mode: difference;
   color: #E7E3DA;
+  transition: transform var(--dur-mid) var(--ease-soft);
+}
+.site-header.nav-hidden {
+  transform: translateY(-120%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header { transition: none; }
+  .site-header.nav-hidden { transform: none; }
 }
 
 .brand {
@@ -347,8 +355,9 @@ a:focus-visible, button:focus-visible {
   pointer-events: none;
   opacity: 0;
   z-index: 50;
-  transform: translate(-50%, -50%) scale(0.94);
-  transition: opacity var(--dur-fast) var(--ease-soft);
+  --tilt: 0deg;
+  transform: translate(-50%, -50%) scale(0.94) rotate(var(--tilt));
+  transition: opacity var(--dur-fast) var(--ease-soft), transform 0.4s var(--ease-soft);
 }
 .project-preview.is-visible { opacity: 1; }
 .project-preview img { width: 100%; height: 100%; object-fit: cover; }
@@ -463,8 +472,10 @@ a:focus-visible, button:focus-visible {
   align-items: end;
 }
 .soft-space__gallery figure { margin: 0; }
-.soft-space__gallery img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
-.soft-space__gallery .tall { aspect-ratio: 3/4; }
+.soft-space__gallery .media-frame { overflow: hidden; }
+.soft-space__gallery img { width: 100%; aspect-ratio: 4/5; object-fit: cover; transition: transform 0.6s var(--ease-soft); }
+.soft-space__gallery .media-frame:hover img { transform: scale(1.05); }
+.soft-space__gallery .tall img { aspect-ratio: 3/4; }
 .soft-space__gallery figcaption {
   font-size: var(--fs-meta); letter-spacing: var(--ls-meta); text-transform: uppercase;
   color: #7C776C; margin-top: var(--sp-2);
@@ -492,7 +503,8 @@ a:focus-visible, button:focus-visible {
 .preview-band__text { max-width: 46ch; }
 .preview-band__text p { margin-top: var(--sp-2); color: #4A473F; }
 .preview-band__visual { aspect-ratio: 5/4; overflow: hidden; }
-.preview-band__visual img { width: 100%; height: 100%; object-fit: cover; }
+.preview-band__visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-soft); }
+.preview-band__visual:hover img { transform: scale(1.06); }
 .preview-band .link-arrow { margin-top: var(--sp-3); display: inline-block; }
 
 @media (max-width: 900px) {
@@ -549,7 +561,9 @@ a:focus-visible, button:focus-visible {
 }
 .experiment-item { margin: 0; }
 .experiment-item:nth-child(3n+2) { margin-top: var(--sp-6); }
-.experiment-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; background: var(--dm-bg-2); }
+.experiment-item .media-frame { overflow: hidden; background: var(--dm-bg-2); }
+.experiment-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform 0.6s var(--ease-soft); }
+.experiment-item .media-frame:hover img { transform: scale(1.06); }
 .experiment-item figcaption {
   display: flex; justify-content: space-between;
   margin-top: var(--sp-2);
@@ -573,7 +587,9 @@ a:focus-visible, button:focus-visible {
 .about-hero { padding: var(--sp-9) var(--edge) var(--sp-6); border-bottom: 1px solid var(--ss-line); background: var(--ss-bg); color: var(--ss-ink); }
 .about-hero__intro { font-size: clamp(1.6rem, 3vw, 2.4rem); font-family: var(--font-display); max-width: 22ch; margin-top: var(--sp-3); }
 .about-body { background: var(--ss-bg); color: var(--ss-ink); padding: var(--sp-7) var(--edge) var(--sp-8); display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--sp-6); }
-.about-body__portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.about-body__portrait { overflow: hidden; }
+.about-body__portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; transition: transform 0.6s var(--ease-soft); }
+.about-body__portrait:hover img { transform: scale(1.05); }
 .about-body__text p { max-width: 60ch; color: #3E3B34; }
 .about-body__text p + p { margin-top: var(--sp-3); }
 .about-interests { margin-top: var(--sp-5); display: flex; flex-wrap: wrap; gap: var(--sp-2); }
@@ -603,6 +619,60 @@ a:focus-visible, button:focus-visible {
   font-size: var(--fs-meta);
   letter-spacing: var(--ls-meta);
   text-transform: uppercase;
+}
+
+/* ==========================================================================
+   MARQUEE (moving text strip)
+   ========================================================================== */
+
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--dm-line);
+  padding: var(--sp-3) 0;
+  white-space: nowrap;
+}
+.marquee__track {
+  display: inline-flex;
+  animation: marquee-scroll 28s linear infinite;
+}
+.marquee__track span {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  padding: 0 var(--sp-4);
+  color: var(--dm-warm-white);
+  opacity: 0.9;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.marquee__track span::after {
+  content: '—';
+  margin-left: var(--sp-4);
+  color: var(--dm-grey);
+  font-style: normal;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+
+/* ==========================================================================
+   KEN BURNS (slow continuous zoom on hero imagery)
+   ========================================================================== */
+
+.kenburns {
+  animation: kenburns-zoom 22s ease-in-out infinite alternate;
+}
+@keyframes kenburns-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.07); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+  .kenburns { animation: none; }
 }
 
 /* ==========================================================================
