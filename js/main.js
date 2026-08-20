@@ -4,36 +4,6 @@
 
 document.documentElement.classList.add('js');
 
-/* ---------------- Auto-hide nav on scroll ---------------- */
-(function autoHideNav() {
-  const header = document.querySelector('.site-header');
-  if (!header) return;
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduced) return;
-
-  let lastY = window.scrollY;
-  let ticking = false;
-  const threshold = 80; // px scrolled before nav can hide
-  const mobileNavOpen = () => document.querySelector('.mobile-nav')?.classList.contains('is-open');
-
-  function update() {
-    const y = window.scrollY;
-    if (!mobileNavOpen()) {
-      if (y > lastY && y > threshold) {
-        header.classList.add('nav-hidden'); // scrolling down
-      } else {
-        header.classList.remove('nav-hidden'); // scrolling up or near top
-      }
-    }
-    lastY = y;
-    ticking = false;
-  }
-
-  window.addEventListener('scroll', () => {
-    if (!ticking) { requestAnimationFrame(update); ticking = true; }
-  }, { passive: true });
-})();
-
 /* ---------------- Mobile nav ---------------- */
 (function mobileNav() {
   const toggle = document.querySelector('.nav-toggle');

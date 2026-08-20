@@ -215,7 +215,24 @@ const PROJECTS = [
       "images/projects/meeting-room-05.jpg",
       "images/projects/meeting-room-06.jpg"
     ],
-    details: ["images/projects/meeting-room-material-board.jpg"],
+    details: [
+      "images/projects/meeting-room-material-board.jpg",
+      "images/projects/meeting-room-shopdrawing-01.jpg",
+      "images/projects/meeting-room-shopdrawing-02.jpg",
+      "images/projects/meeting-room-shopdrawing-03.jpg",
+      "images/projects/meeting-room-shopdrawing-04.jpg",
+      "images/projects/meeting-room-shopdrawing-05.jpg",
+      "images/projects/meeting-room-shopdrawing-06.jpg",
+      "images/projects/meeting-room-shopdrawing-07.jpg",
+      "images/projects/meeting-room-shopdrawing-08.jpg",
+      "images/projects/meeting-room-shopdrawing-09.jpg",
+      "images/projects/meeting-room-shopdrawing-10.jpg",
+      "images/projects/meeting-room-shopdrawing-11.jpg",
+      "images/projects/meeting-room-shopdrawing-12.jpg",
+      "images/projects/meeting-room-shopdrawing-13.jpg",
+      "images/projects/meeting-room-shopdrawing-14.jpg",
+      "images/projects/meeting-room-shopdrawing-15.jpg"
+    ],
     gallery: [
       "images/projects/meeting-room-01.jpg",
       "images/projects/meeting-room-02.jpg",
